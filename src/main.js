@@ -3,7 +3,6 @@ import { renderImages } from './js/render-functions';
 import { ButtonCondition, LoaderCondition } from './js/render-functions';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import axios from 'axios';
 
 // ============refs=========
 
