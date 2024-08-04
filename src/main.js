@@ -19,7 +19,7 @@ let maxElements = 15;
 let totalPages = 0;
 let page = 1;
 
-// ========logic code========
+// =======logic code=======
 
 loadMoreBtn.hide();
 
