@@ -43,7 +43,6 @@ function handleSubmit(event) {
     return;
   }
 
-  console.log(inputValue);
   fetchImages(inputValue, page)
     .then(images => {
       totalPages = Math.ceil(images.totalHits / maxElements);
@@ -85,7 +84,7 @@ function handleSubmit(event) {
         position: 'topRight',
         messageColor: 'white',
         backgroundColor: 'orange',
-        message: 'Error',
+        message: 'Error of submit button',
       });
     });
   form.reset();
@@ -104,7 +103,7 @@ async function handleLoadMore() {
       top: cardHeight * 2,
       behavior: 'smooth',
     });
-    console.log(cardHeight);
+
     if (page >= totalPages) {
       loadMoreBtn.hide();
       iziToast.warning({
@@ -115,6 +114,13 @@ async function handleLoadMore() {
     }
   } catch (err) {
     console.log(err);
+    iziToast.error({
+      maxWidth: '320px',
+      position: 'topRight',
+      messageColor: 'white',
+      backgroundColor: 'orange',
+      message: 'Error of load more button',
+    });
   }
 }
 
